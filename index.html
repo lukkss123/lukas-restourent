@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ქართული სამზარეულო</title>
+  <link rel="stylesheet" href="food.css" />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <i class="fab fa-facebook-f"></i>
+      <i class="fab fa-twitter"></i>
+      <i class="fab fa-instagram"></i>
+    </div>
+    <div class="nav-center">
+      <img 
+        src="https://cdn-icons-png.flaticon.com/512/3075/3075977.png" 
+        alt="Burger Logo"
+      />
+    </div>
+    <div class="nav-right">
+      <button id="orderBtn">Order Online</button>
+    </div>
+  </nav>
+
+  <!-- Menu Section -->
+  <section class="menu-section">
+    <div class="menu-buttons">
+      <button class="menu-btn active" data-category="burger">Burger</button>
+      <button class="menu-btn" data-category="pizza">Pizza</button>
+      <button class="menu-btn" data-category="dessert">Dessert</button>
+    </div>
+
+    <div id="cards-container" class="cards-container"></div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section class="reviews-section">
+    <h2 style="text-align:center; margin:50px 0;">რესტორნების რევიუები</h2>
+    <div class="filters">
+        <button class="filter-btn active" onclick="filterCards('all')">ყველა</button>
+        <button class="filter-btn" onclick="filterCards('თბილისი')">თბილისი</button>
+        <button class="filter-btn" onclick="filterCards('ბათუმი')">ბათუმი</button>
+        <button class="filter-btn" onclick="filterCards('კახეთი')">კახეთი</button>
+    </div>
+
+    <div class="cards-container" id="cardsContainer"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 ქართული სამზარეულო</p>
+  </footer>
+
+  <script src="food.js"></script>
+</body>
+</html>
